@@ -12,4 +12,4 @@ steps:
     scriptType: 'ps'
     scriptLocation: 'inlineScript'
     inlineScript: |
-      az storage account delete --name cucumbertestreport01 --resource-group GR-QA --yes
+      az storage account delete --name appiumtestreport --resource-group GR-QA --yes
