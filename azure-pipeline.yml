@@ -1,0 +1,15 @@
+trigger:
+- main
+
+pool:
+  name: 'PortafolioAG'
+
+steps:
+- task: AzureCLI@2
+  displayName: 'Eliminar Azure Blob Storage'
+  inputs:
+    azureSubscription: 'AzureResourceManager'
+    scriptType: 'ps'
+    scriptLocation: 'inlineScript'
+    inlineScript: |
+      az storage account delete --name cucumbertestreport06 --resource-group GR-QA --yes
